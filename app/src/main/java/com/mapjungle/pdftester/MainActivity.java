@@ -14,8 +14,11 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         WebView mWebView=new WebView(this);
 
+        String googleDocs = "https://docs.google.com/gview?embedded=true&url=";
+        String pdfname = "http://geekandsundry.com/wp-content/uploads/2015/10/Witch-Hunter-Class-FINAL-4.2.pdf";
+
         mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.loadUrl("https://media.wizards.com/2015/downloads/dnd/02_UA_Underdark_Characters.pdf");
+        mWebView.loadUrl(googleDocs + pdfname);
         setContentView(mWebView);
     }
 
